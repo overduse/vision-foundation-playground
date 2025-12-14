@@ -1,5 +1,11 @@
+transformers
 huggingface-hub
 pillow
+
+# install pytorch individually
+# pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
 torch
 torchvision
-transformers
+
+accelerate
+safetensors
