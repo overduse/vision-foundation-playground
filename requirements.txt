@@ -1,0 +1,5 @@
+huggingface-hub
+pillow
+torch
+torchvision
+transformers
