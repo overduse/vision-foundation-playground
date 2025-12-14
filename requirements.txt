@@ -1,6 +1,9 @@
 transformers
 huggingface-hub
 pillow
+ipykernel
+matplotlib
+ipywidgets
 
 # install pytorch individually
 # pip install torch torchvision --index-url https://download.pytorch.org/whl/cu121
