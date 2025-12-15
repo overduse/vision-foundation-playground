@@ -21,9 +21,9 @@ def load_clip_model(model_name="large", use_fp16=True):
         model, processor, device
     """
     model_path = MODEL_CONFIGS.get(model_name)
+    valid_keys = list(MODEL_CONFIGS.keys())
     if not model_path:
-        raise ValueError(f" Unknown model name: {model_name}."
-                         "Optional: {list(MODEL_CONFIGS.keys())}")
+        raise ValueError(f"Unknown model name: {model_name}. Optional: {valid_keys}")
     
     if not os.path.exists(model_path):
         raise FileNotFoundError(f"can not find model file: {model_path}"
@@ -37,7 +37,6 @@ def load_clip_model(model_name="large", use_fp16=True):
 
         model = CLIPModel.from_pretrained(model_path, dtype=dtype).to(device)
         processor = CLIPProcessor.from_pretrained(model_path, use_fast=False)
-        # processor = CLIPProcessor.from_pretrained(model_path)
 
         print(f"loading success! (FP16={use_fp16})")
         return model, processor, device

@@ -15,11 +15,9 @@ PROJECT_ROOT = os.path.dirname(CURRENT_DIR)
 MODELS_ROOT = os.path.join(PROJECT_ROOT, "models")
 
 MODELS_TO_DOWNLOAD = {
-    # "clip-vit-large-patch14": "openai/clip-vit-large-patch14",
     "clip-vit-base-laion2b": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
     "clip-vit-large-laion2b": "laion/CLIP-ViT-L-14-laion2B-s32B-b82K",
     "clip-vit-huge-laion2b": "laion/CLIP-ViT-H-14-laion2B-s32B-b79K",
-    # "clip-vit-base-patch32": "laion/CLIP-ViT-B-32-laion2B-s34B-b79K",
 }
 
 def main():
